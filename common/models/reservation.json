@@ -1,0 +1,32 @@
+{
+  "name": "Reservation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "campsiteId": {
+      "type": "number",
+      "required": true
+    },
+    "startDate": {
+      "type": "string",
+      "required": true
+    },
+    "endDate": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "campsite": {
+      "type": "belongsTo",
+      "model": "Campsite",
+      "foreignKey": "campsiteId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
